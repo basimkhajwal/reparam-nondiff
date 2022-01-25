@@ -151,4 +151,5 @@ plot_cfg = {'sample_n': 100,
             'step'    : 100}
 compare = {'ours2' : 'elbo_grad_ours2.py',
            'score' : 'elbo_grad_score.py',
-           'repar' : 'elbo_grad_repar.py'}
+           'repar' : 'elbo_grad_repar.py',
+           'smooth': 'elbo_grad_smooth.py' }

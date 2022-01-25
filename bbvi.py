@@ -77,7 +77,11 @@ def run_bm(bm_fname, optz_cfg=None, verbose=True, misc=None):
         misc_arg = {'misc':misc} if alg_str == 'ours2' else {}
 
         # run adam
-        grad_func = lambda thts, e=e: alg.elbo_grad(e, thts, **misc_arg)
+        if alg_str == 'smooth':
+          grad_func = lambda idx, thts, e=e: alg.elbo_grad(e, thts, idx)
+        else:
+          grad_func = lambda idx, thts, e=e: alg.elbo_grad(e, thts, **misc_arg)
+
         thts_res = optimizer.adam(grad_func, thts_init,
                                   iter_n   = optz_cfg['iter_n'],
                                   lr       = optz_cfg['lr'],

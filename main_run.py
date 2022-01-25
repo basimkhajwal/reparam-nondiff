@@ -118,7 +118,8 @@ if __name__ == "__main__":
     sys.setrecursionlimit(10000)
     
     # add bbvi.BM_DIR to sys.path
-    sys.path.append(os.path.dirname(__file__) + bbvi.BM_DIR)
+    # sys.path.append(os.path.dirname(__file__) + bbvi.BM_DIR)
+    sys.path.append("./bm")
 
     ####################
     # argument parsing #

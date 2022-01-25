@@ -6,6 +6,7 @@ import time, sys
 
 import util
 
+from functools import partial
 
 ########
 # adam #
@@ -69,8 +70,8 @@ def adam(grad_func, thts, iter_n,
             sys.stdout.flush()
 
         # compute: gs
-        if n_jobs == 1: gs = [grad_func(thts) for i in range(sample_n)]
-        else:           gs = pool.map(grad_func, [thts for i in range(sample_n)])
+        if n_jobs == 1: gs = [grad_func(i, thts) for j in range(sample_n)]
+        else:           gs = pool.map(partial(grad_func, i), [thts for j in range(sample_n)])
         if misc is not None:
             repar = [repar for (_,repar,_) in gs]
             corrc = [corrc for (_,_,corrc) in gs]
