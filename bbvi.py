@@ -18,7 +18,7 @@ BM_DIR = 'bm/'
 RES_DIR = 'res/'
 RES_EXT = '.file'
 PLOT_EXT = '.png'
-PRETTY_PLOT_EXT = '.pdf'
+PRETTY_PLOT_EXT = '.eps'
 
 
 #######
@@ -172,14 +172,16 @@ def print_last_thts(bm_fname, optz_cfg=None):
 
 def pretty_plot(bm_fname, optz_cfg, plot_cfg, legend_loc=4, sci_format=False, y_min=0, y_max=0):
     LEGEND = { # alg : (order in legend, label to appear)
-        'ours2' : (3, r'\textsc{Ours}'),
+        'ours2' : (3, r'\textsc{Lyy18}'),
         'repar' : (2, r'\textsc{Repar}'),
         'score' : (1, r'\textsc{Score}'),
+        'smooth': (4, r'\textsc{Smooth}'),
     }
     LINE_COLOR = {
-        'ours2' : 'xkcd:red', #'r', C2
-        'repar' : 'xkcd:bright blue', #'b', C3
-        'score' : 'xkcd:green', #'g', C5
+        'ours2' : 'red', #'r', C2
+        'repar' : 'blue', #'b', C3
+        'score' : 'orange', #'g', C5
+        'smooth': 'green'
     }
     LINE_STYLE = {
         # linestyle = : | -. | -- | -
@@ -215,7 +217,7 @@ def pretty_plot(bm_fname, optz_cfg, plot_cfg, legend_loc=4, sci_format=False, y_
     plt.switch_backend('agg')
     plt.style.use('classic')
     plt.rc('text', usetex = True)
-    plt.rc('font', size=FONTSIZE, family='serif', serif='Computer Modern')
+    plt.rc('font', size=FONTSIZE, family='serif')
     # for bug fixing: matplotlib inserts \mathdefault{...} which is an useless, undefined command.
     plt.rc('text.latex', preamble = r'\newcommand{\mathdefault}[1]{{#1}}')
     fig, ax = plt.subplots(figsize=(8,6))  # (8,5) <--- size

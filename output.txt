@@ -1,0 +1,26 @@
+===== OPTZ: res/bm-sns.py_iter=10000_lr=0.001_sample=1_samplevar=8 =====
+[ours2] optimizing using 8 processors...  took 3412.05 sec [var_cmp=18628, var_nrm=56825.9]
+[repar] optimizing using 8 processors...  took 3315.09 sec [var_cmp=14644.6, var_nrm=48016.4]
+[score] optimizing using 8 processors...  took 2874.40 sec [var_cmp=699903, var_nrm=2.26882e+06]
+[smooth] optimizing using 8 processors...  took 3177.46 sec [var_cmp=13853.1, var_nrm=44299.3]
+
+===== PLOT: res/bm-sns.py_iter=10000_lr=0.001_sample=1_samplevar=8_sample=1000_step=100 =====
+plotting... took 2843.25 sec
+
+===== OPTZ: res/bm-tcl.py_iter=10000_lr=0.001_sample=1_samplevar=8 =====
+[ours2] optimizing using 8 processors...  took 8025.01 sec [var_cmp=1.68443e+10, var_nrm=1.1997e+12]
+[repar] optimizing using 8 processors...  took 7302.73 sec [var_cmp=6.75045e+09, var_nrm=7.22692e+10]
+[score] optimizing using 8 processors...  took 6534.23 sec [var_cmp=1.42701e+18, var_nrm=2.87854e+18]
+[smooth] optimizing using 8 processors...  took 7027.04 sec [var_cmp=1.96174e+09, var_nrm=2.75605e+10]
+
+===== PLOT: res/bm-tcl.py_iter=10000_lr=0.001_sample=1_samplevar=8_sample=1000_step=100 =====
+plotting... took 8635.01 sec
+
+===== OPTZ: res/bm-time.py_iter=10000_lr=0.001_sample=1_samplevar=8 =====
+[ours2] optimizing using 8 processors...  took 10379.60 sec [var_cmp=1.43076e+11, var_nrm=1.98206e+12]
+[repar] optimizing using 8 processors...  took 9798.31 sec [var_cmp=1.27072e+11, var_nrm=1.76933e+12]
+[score] optimizing using 8 processors...  took 4309.70 sec [var_cmp=2.80704e+13, var_nrm=8.18697e+14]
+[smooth] optimizing using 8 processors...  took 15653.04 sec [var_cmp=1.24685e+11, var_nrm=1.75203e+12]
+
+===== PLOT: res/bm-time.py_iter=10000_lr=0.001_sample=1_samplevar=8_sample=1000_step=100 =====
+plotting... took 6908.71 sec
